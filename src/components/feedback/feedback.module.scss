@@ -1,0 +1,94 @@
+.slick-slider.slick-initialized {
+    color: black;
+}
+
+* {
+    font-family: Raleway;
+}
+
+.feedbackWrapper {
+    width: 100%;
+    background-color: #F15B5B;
+    padding-bottom: 50px;
+    &_content {
+        &_text {
+            padding: 50px;
+            justify-content: center;
+            text-align: center;
+            &_header {
+                color: #000;
+                font-weight: 600;
+                font-size: 28px;
+                padding: 30px;
+            }
+            &_title {
+                color: #fff;
+                font-weight: 800;
+                font-size: 52px;
+                padding: 10px;
+            }
+            &_fulltitle {
+                color: #fff;
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+        &_info {
+            display: flex !important;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center !important;
+            img {
+                height: 120px !important;
+                width: 120px !important;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: 50% 23.333%;
+            }
+            &_name {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: 30px;
+                letter-spacing: 0.05em;
+                line-height: 1.3;
+            }
+            &_proffesion {
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+                font-weight: 600;
+                margin-top: 10px;
+            }
+            &_feedback {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 20px;
+                max-width: 500px;
+                text-align: center;
+            }
+            // &_sliderArrow1 {
+            //     position: absolute;
+            //     height: 40px;
+            //     width: 40px;
+            //     // left: 40%;
+            //     align-items: center;
+            //     fill: black !important;
+            // }
+            // &_sliderArrow2 {
+            //     position: absolute;
+            //     height: 40px;
+            //     width: 40px;
+            //     // right: 40%;
+            //     align-items: center;
+            //     transform: rotate(180deg);
+            // }
+        }
+    }
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    fill: #fff;
+}

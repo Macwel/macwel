@@ -1,0 +1,74 @@
+.indexWrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    &_Overview {
+        width: 100%;
+        padding: 20px;
+        background-color: #F7F8FC;
+        &_header {
+            display: flex;
+            justify-content: space-between;
+            &_title {
+                font-size: 22px;
+                font-weight: 600;
+            }
+            &_user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_nameUser {
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-right: 14px;
+                }
+                &_iconUser {
+                    background-color: #A4A6B3;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &_content {
+            padding-top: 54px;
+            &_description {
+                @media (max-width: 767px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                display: flex;
+                justify-content: flex-start;
+                &_block {
+                    margin-right: 20px;
+                    width: 258px;
+                    height: 136px;
+                    border: 2px solid #d5d6d8;
+                    border-radius: 12px;
+                    text-align: center;
+                    padding-top: 24px;
+                     :nth-child(1) {
+                        color: #A4A6B3;
+                        font-size: 22px;
+                        font-weight: 500;
+                    }
+                     :nth-child(2) {
+                        color: #000;
+                        font-size: 32px;
+                        font-weight: 700;
+                        padding-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.activeBlock {
+    border: 3px solid #F15B5B;
+     :nth-child(2) {
+        color: #F15B5B;
+        ;
+    }
+}

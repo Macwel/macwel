@@ -1,0 +1,40 @@
+* {
+    font-family: Raleway;
+}
+
+.slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    img {
+        filter: brightness(0.7);
+    }
+    &_line {
+        @media screen and (max-width: 520px) {
+            height: auto;
+            transform: none;
+        }
+        @media screen and (max-width: 900px) {
+            height: auto;
+        }
+        position: absolute;
+        top: 20%;
+        height: 200px;
+        width: 100%;
+        transform: translate(0%, 50%);
+        background-color: rgba(255, 255, 255, 0.397);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        div {
+            display: flex;
+            justify-content: center;
+            p {
+                color: #fff;
+                font-weight: 800;
+                font-size: 38px;
+            }
+        }
+    }
+}
