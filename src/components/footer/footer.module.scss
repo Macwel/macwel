@@ -1,0 +1,78 @@
+.footerWrapper {
+    width: 100%;
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+    &_ft {
+        @media screen and (max-width: 612px) {
+            display: none;
+        }
+        background: url('../../common/img/logo.png') no-repeat 100% 100%;
+        background-size: contain;
+        width: 120px;
+        height: 40px;
+    }
+    &_separator {
+        width: 100%;
+        max-width: 1300px;
+        height: 0.5px;
+        background-color: rgb(141, 138, 138);
+    }
+    &_content {
+        @media screen and (max-width: 612px) {
+            justify-content: center;
+            align-items: center;
+        }
+        display: flex;
+        justify-content: space-between;
+        max-width: 1170px;
+        width: 100%;
+        &_links {
+            display: -webkit-inline-box;
+            &_link {
+                padding: 20px 25px;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+        &_terms {
+            @media screen and (max-width: 612px) {
+                justify-content: center;
+                align-items: center;
+            }
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            margin-right: 20px;
+            max-width: 1170px;
+            width: 100%;
+            p {
+                color: white;
+                font-size: 14vw;
+                font-weight: 100;
+                span {
+                    font-weight: 300;
+                    a {
+                        text-decoration: underline;
+                        color: #fff;
+                    }
+                }
+            }
+            &_created {
+                p {
+                    @media screen and (max-width: 615px) {
+                        font-size: 2.5vw;
+                    }
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+* {
+    font-family: Raleway;
+}
+
+.wrapper {
+    &_services {
+        @media screen and (max-width: 1100px) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+         ::selection {
+            background-color: #fff !important;
+        }
+        display: flex;
+        position: relative;
+        width: 100%;
+        background-color: #151515;
+        color: #fff;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-top: -10px;
+        &_text {
+            max-width: 400px;
+        }
+        &_info {
+            text-transform: uppercase;
+            &_header {
+                color: #b7b9be;
+                font-weight: 700;
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+            &_textPostHeader {
+                font-weight: 300;
+                font-size: 38px;
+                margin-bottom: 15px;
+            }
+            &_textConst {
+                font-weight: 800;
+                margin-bottom: 15px;
+                font-size: 28px;
+            }
+            &_textHeaderLast {
+                font-weight: 300;
+                margin-bottom: 15px;
+                font-size: 14px;
+            }
+        }
+        &_listServices {
+            display: flex;
+            justify-content: center;
+            &_column {
+                margin-left: 50px;
+                &_point {
+                    margin-bottom: 15px;
+                    &_lessThan {
+                        margin-right: 5px;
+                        width: 14px !important;
+                        transform: rotate(180deg);
+                        svg {
+                            color: #F15B5B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

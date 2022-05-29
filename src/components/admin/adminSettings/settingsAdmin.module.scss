@@ -1,0 +1,128 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    &_container {
+        width: 100%;
+        padding: 20px;
+        background-color: #F7F8FC;
+        &_header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 38px;
+            &_title {
+                font-size: 22px;
+                font-weight: 600;
+            }
+            &_user {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &_nameUser {
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-right: 14px;
+                }
+                &_iconUser {
+                    background-color: #A4A6B3;
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &_tableTop {
+            display: flex;
+            height: 90%;
+            justify-content: center;
+            &_block {
+                width: 90%;
+                background-color: #fff;
+                border: 1px solid #DFE0EB;
+                border-radius: 8px;
+                padding: 32px 32px 0 32px;
+                &_headerBlock {
+                    display: flex;
+                    justify-content: space-between;
+                    &_text {
+                        font-weight: bold;
+                        font-size: 19px;
+                    }
+                    &_sort {
+                        font-weight: 500;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table {
+    padding-top: 20px;
+    max-width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    &_content {
+        &_blockVisible {
+            border-radius: 10px;
+            display: flex;
+            // width: 350px;
+            height: 150px;
+            color: #fff;
+            background-color: #151515;
+            Button {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                width: 180px !important;
+                padding: 0 0 0 0 !important;
+            }
+            &_active {
+                display: flex;
+                position: relative;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                &_text {
+                    max-height: 100%;
+                    font-size: 18px !important;
+                }
+                &_func {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 10px;
+                    &_roll {
+                        display: flex;
+                        svg {
+                            color: rgb(86, 247, 86) !important;
+                        }
+                    }
+                    &_delete {
+                        display: flex;
+                        svg {
+                            color: #F15B5B !important;
+                        }
+                    }
+                }
+                p {
+                    font-size: 30px;
+                }
+                svg {
+                    font-size: 40px !important;
+                }
+            }
+            &_info {
+                padding-top: 20px;
+                align-items: center;
+                text-align: center;
+                svg {
+                    padding-bottom: 10px;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
