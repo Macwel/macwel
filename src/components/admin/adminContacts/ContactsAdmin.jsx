@@ -28,6 +28,8 @@ const AddContactSchema = Yup.object().shape({
 })
 export const Contacts = () => {
   const [reqs, setReqs] = useState([])
+  const [editing, setEditing] = useState(null)
+
   const token = window.localStorage.getItem("token")
 
   if (!token) {
@@ -65,7 +67,6 @@ export const Contacts = () => {
       )
       .then((res) => {
         if (res.status === 200) {
-          console.log(res)
           setReqs(res.data.requests)
         }
       })
@@ -97,6 +98,29 @@ export const Contacts = () => {
 
   const handleClickDestroy = (id, e) => {
     destroyContactById(id)
+  }
+
+  const handleChange = async (id) => {
+    if (editing !== null) {
+      await axios.patch("/admin/editContact", { ...editing }, { headers })
+
+      const index = reqs.findIndex((req) => req.id === editing.id)
+      const copyReqs = [...reqs]
+      copyReqs[index] = editing
+
+      setReqs(copyReqs)
+      setEditing(null)
+
+      return
+    }
+
+    const req = reqs.find((req) => req.id === id)
+
+    if (!req) {
+      return
+    }
+
+    setEditing({ ...req })
   }
 
   return (
@@ -142,7 +166,8 @@ export const Contacts = () => {
                 <div className={`${styles.col} ${styles.col3}`}>Компания</div>
                 <div className={`${styles.col} ${styles.col4}`}>Телефон</div>
                 <div className={`${styles.col} ${styles.col4}`}>Емейл</div>
-                <div className={`${styles.col} ${styles.col4}`}>Действие</div>
+                <div className={`${styles.col} ${styles.col4}`}>Действие 1</div>
+                <div className={`${styles.col} ${styles.col4}`}>Действие 2</div>
                 <div
                   className={`${styles.col} ${styles.col5} ${styles.col6}`}
                 ></div>
@@ -151,24 +176,84 @@ export const Contacts = () => {
               {reqs.length !== 0 ? (
                 reqs.map((el) => (
                   <li
+                    key={el.id}
                     style={{ backgroundColor: "#fff" }}
                     className={styles.table_header}
                   >
                     <div className={`${styles.col} ${styles.col1}`}>
-                      {el.fullName}
+                      {editing?.id === el.id ? (
+                        <input
+                          value={editing.fullName}
+                          onChange={(event) =>
+                            setEditing({
+                              ...editing,
+                              fullName: event.target.value
+                            })
+                          }
+                        />
+                      ) : (
+                        el.fullName
+                      )}
                     </div>
                     <div className={`${styles.col} ${styles.col3}`}>
-                      {el.nameCompany}
+                      {editing?.id === el.id ? (
+                        <input
+                          value={editing.nameCompany}
+                          onChange={(event) =>
+                            setEditing({
+                              ...editing,
+                              nameCompany: event.target.value
+                            })
+                          }
+                        />
+                      ) : (
+                        el.nameCompany
+                      )}
                     </div>
                     <div className={`${styles.col} ${styles.col4}`}>
-                      {el.telephone}
+                      {editing?.id === el.id ? (
+                        <input
+                          value={editing.telephone}
+                          onChange={(event) =>
+                            setEditing({
+                              ...editing,
+                              nameCompany: event.target.value
+                            })
+                          }
+                        />
+                      ) : (
+                        el.telephone
+                      )}
                     </div>
                     <div className={`${styles.col} ${styles.col4}`}>
-                      {el.email}
+                      {editing?.id === el.id ? (
+                        <input
+                          value={editing.email}
+                          onChange={(event) =>
+                            setEditing({
+                              ...editing,
+                              nameCompany: event.target.value
+                            })
+                          }
+                        />
+                      ) : (
+                        el.email
+                      )}
                     </div>
                     <div className={`${styles.col} ${styles.col4}`}>
-                      <button onClick={handleClickDestroy.bind(this, el.id)}>
-                        Удалить
+                      <button
+                        onClick={
+                          editing?.id === el.id
+                            ? () => setEditing(null)
+                            : handleClickDestroy.bind(this, el.id)
+                        }
+                      >
+                        {editing?.id === el.id ? "Отменить" : "Удалить"}
+                      </button>
+                    </div>
+                    <div className={`${styles.col} ${styles.col4}`}>
+                      <button onClick={handleChange.bind(this, el.id)}>
+                        {editing?.id === el.id ? "Подтвердить" : "Изменить"}
                       </button>
                     </div>
                     <div
