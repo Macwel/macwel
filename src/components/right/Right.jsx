@@ -1,4 +1,4 @@
-import styles from './right.module.scss'
+import styles from "./right.module.scss"
 export const Rightt = () => {
   return (
     <div className={styles.wrapper}>

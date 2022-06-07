@@ -4,5 +4,5 @@ export {
   Route,
   Link,
   useHistory,
-  useParams,
-} from 'react-router-dom';
+  useParams
+} from "react-router-dom"

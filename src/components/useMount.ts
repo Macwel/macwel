@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect } from "react"
 
 const useMount = (effect: () => (() => void) | void) => {
-    useEffect(effect, []);
-};
+  useEffect(effect, [])
+}
 
-export default useMount;
+export default useMount

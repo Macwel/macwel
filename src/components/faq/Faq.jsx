@@ -1,6 +1,6 @@
-import styles from './faq.module.scss'
+import styles from "./faq.module.scss"
 
-export const Faq= () => {
+export const Faq = () => {
   return (
     <div className={styles.faqWrapper}>
       <div className={styles.faqWrapper_content}>

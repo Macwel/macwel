@@ -1,32 +1,35 @@
-import styles from './settingsAdmin.module.scss'
-import { SideBar } from '../sidebar/Sidebar'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faX } from '@fortawesome/free-solid-svg-icons'
+import styles from "./settingsAdmin.module.scss"
+import { SideBar } from "../sidebar/Sidebar"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUser } from "@fortawesome/free-solid-svg-icons"
+import { faX } from "@fortawesome/free-solid-svg-icons"
 
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect, useState } from "react"
+import axios from "axios"
 export const Settings = () => {
   const [reqs, setReqs] = useState([])
   const [token, setToken] = useState(null)
   const [data, setData] = useState([])
-  const Arr = [{
-    name: 'love'
-  },
-  {
-    name: 'you'
-  }]
-  useEffect (() => {
+  const Arr = [
+    {
+      name: "love"
+    },
+    {
+      name: "you"
+    }
+  ]
+  useEffect(() => {
     setData(Arr)
-  },[])
+  }, [])
   const hundleClickRemove = () => {
-  const Arrs = [{
-    name: 'love'
-  },]
-  setData(Arrs)
-}
-  
-  
+    const Arrs = [
+      {
+        name: "love"
+      }
+    ]
+    setData(Arrs)
+  }
+
   // useEffect(() => {
   //   return setToken(window.localStorage.getItem('token'))
   // }, [])
@@ -34,8 +37,8 @@ export const Settings = () => {
   //   // !window.localStorage.getItem('token') && router.push('/admin/auth')
   // }, [])
   const headers = {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${token}`
   }
   // useEffect(() => {
   //   axios
@@ -94,29 +97,33 @@ export const Settings = () => {
             </div>
             <div className={styles.table}>
               <div className={styles.table_content}>
-            {data.map((key) => (
-                <div className={styles.table_content_blockVisible}>
-                  <div className={styles.table_content_blockVisible_info}>
-                    <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
-                    <p>Иванов Дмитрий Ильич</p>
-                  </div>
-                  <div
-                    className={`${styles.table_content_blockVisible_info} ${styles.table_content_blockVisible_active}`}
-                  >
-                    <p
-                      className={styles.table_content_blockVisible_active_text}
-                    >
-                      lorem ipsum dolor sit amet, consectlorem ipsum dolor sit
-                      amet, consectlorem ipsum dolor sit amet, consectlorem
-                      ipsum dolor sit amet, consectlorem ipsum dolor sit amet,
-                      consectlorem ipsum dolor sit amet, consectlorem ipsum
-                      dolor sit amet, consectlorem ipsum dolor sit amet,
-                      consectlorem ipsum dolor sit amet, consect
-                    </p>
+                {data.map((key) => (
+                  <div className={styles.table_content_blockVisible}>
+                    <div className={styles.table_content_blockVisible_info}>
+                      <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+                      <p>Иванов Дмитрий Ильич</p>
+                    </div>
                     <div
-                      className={styles.table_content_blockVisible_active_func}
+                      className={`${styles.table_content_blockVisible_info} ${styles.table_content_blockVisible_active}`}
                     >
-                      {/* <div
+                      <p
+                        className={
+                          styles.table_content_blockVisible_active_text
+                        }
+                      >
+                        lorem ipsum dolor sit amet, consectlorem ipsum dolor sit
+                        amet, consectlorem ipsum dolor sit amet, consectlorem
+                        ipsum dolor sit amet, consectlorem ipsum dolor sit amet,
+                        consectlorem ipsum dolor sit amet, consectlorem ipsum
+                        dolor sit amet, consectlorem ipsum dolor sit amet,
+                        consectlorem ipsum dolor sit amet, consect
+                      </p>
+                      <div
+                        className={
+                          styles.table_content_blockVisible_active_func
+                        }
+                      >
+                        {/* <div
                         className={
                           styles.table_content_blockVisible_active_func_roll
                         }
@@ -124,26 +131,25 @@ export const Settings = () => {
                         <FontAwesomeIcon icon={faCheck}></FontAwesomeIcon>
                         <p>Мастер</p>
                       </div> */}
-                      <div
-                        className={
-                          styles.table_content_blockVisible_active_func_delete
-                        }
-                      >
-                        <FontAwesomeIcon icon={faX}></FontAwesomeIcon>
-                        <p onClick = {hundleClickRemove}>Удалить</p>
+                        <div
+                          className={
+                            styles.table_content_blockVisible_active_func_delete
+                          }
+                        >
+                          <FontAwesomeIcon icon={faX}></FontAwesomeIcon>
+                          <p onClick={hundleClickRemove}>Удалить</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  {/* <Button
+                    {/* <Button
                     click={() => {
                       console.log(1)
                     }}
                     type={1}
                     text="Полная информация"
                   ></Button> */}
-                </div>
-              ))}
-                
+                  </div>
+                ))}
               </div>
             </div>
           </div>

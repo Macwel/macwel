@@ -1,4 +1,4 @@
-import styles from './footer.module.scss'
+import styles from "./footer.module.scss"
 
 export const Footer = () => {
   return (
@@ -22,7 +22,7 @@ export const Footer = () => {
             Copyright © 2022 Carobar.
             <span>
               <a href="/rightt"> All rights reserved.</a>
-            </span>{' '}
+            </span>{" "}
             and
             <span>
               <a href="/cookies"> cookies</a>

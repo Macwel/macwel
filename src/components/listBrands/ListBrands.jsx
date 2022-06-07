@@ -1,19 +1,19 @@
-import styles from './listBrands.module.scss'
-import { useState, useEffect } from 'react'
-import BMWBrand from '../../common/img/bmw.webp'
-import HondaBrand from '../../common/img/honda.webp'
-import FordBrand from '../../common/img/ford.webp'
-import AudiBrand from '../../common/img/audi.webp'
-import Slider from 'react-slick'
+import styles from "./listBrands.module.scss"
+import { useState, useEffect } from "react"
+import BMWBrand from "../../common/img/bmw.webp"
+import HondaBrand from "../../common/img/honda.webp"
+import FordBrand from "../../common/img/ford.webp"
+import AudiBrand from "../../common/img/audi.webp"
+import Slider from "react-slick"
 
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 export const ListBrands = () => {
   const [w, setW] = useState(window.innerWidth)
 
   useEffect(() => {
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       setW(window.innerWidth)
     })
   }, [])
@@ -26,8 +26,8 @@ export const ListBrands = () => {
     slidesToScroll: 4,
     arrows: true,
     autoplay: false,
-    autoplaySpeed: 3000,
-  } 
+    autoplaySpeed: 3000
+  }
   return (
     <div className={styles.listBrands}>
       <div className={styles.listBrands_text}>
@@ -41,31 +41,31 @@ export const ListBrands = () => {
             <img src={BMWBrand} alt="step" />
           </div>
           <div
-            style={{ display: 'flex' }}
+            style={{ display: "flex" }}
             className={styles.listBrands_backgroundAll_backgroundSlider}
           >
             <img src={HondaBrand} alt="step" width="200px" height="180px" />
           </div>
           <div
-            style={{ display: 'flex' }}
+            style={{ display: "flex" }}
             className={styles.listBrands_backgroundAll_backgroundSlider}
           >
-            <img src={FordBrand} alt="step" width="280px"  />
+            <img src={FordBrand} alt="step" width="280px" />
           </div>
           <div
-            style={{ display: 'flex' }}
+            style={{ display: "flex" }}
             className={styles.listBrands_backgroundAll_backgroundSlider}
           >
             <img src={AudiBrand} alt="step" />
           </div>
           <div
-            style={{ display: 'flex' }}
+            style={{ display: "flex" }}
             className={styles.listBrands_backgroundAll_backgroundSlider}
           >
             <img src={HondaBrand} alt="step" width="200px" height="180px" />
           </div>
           <div
-            style={{ display: 'flex' }}
+            style={{ display: "flex" }}
             className={styles.listBrands_backgroundAll_backgroundSlider}
           >
             <img src={FordBrand} alt="step" width="280px" />

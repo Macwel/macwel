@@ -1,98 +1,95 @@
-import styles from './requestAdmin.module.scss'
-import { SideBar } from '../sidebar/Sidebar'
-import Button from '../../Button/Button'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import dayjs from 'dayjs'
-import "dayjs/locale/ru";
+import styles from "./requestAdmin.module.scss"
+import { SideBar } from "../sidebar/Sidebar"
+import Button from "../../Button/Button"
+import { useEffect, useState } from "react"
+import axios from "axios"
+import dayjs from "dayjs"
+import "dayjs/locale/ru"
 
 export const Request = () => {
   const [reqs, setReqs] = useState([])
-  
-  const token = window.localStorage.getItem('token');
 
-  if(!token){
-    window.location.href = '/admin/auth'
+  const token = window.localStorage.getItem("token")
+
+  if (!token) {
+    window.location.href = "/admin/auth"
   }
 
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
-  };
+    Authorization: `Bearer ${token}`
+  }
 
-  function getReq () {
+  function getReq() {
     axios
-    .post(
-      `admin/requests`,
-      {},
-      {
-        headers,
-        
-      }
-    )
-    .then((res) => {
-      if (res.status === 200) {
-        setReqs(res.data.requests)
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      .post(
+        `admin/requests`,
+        {},
+        {
+          headers
+        }
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          setReqs(res.data.requests)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   const denyReqById = (id) => {
     axios
-    .post(
-      `/admin/deleteReq`,
-      {
-        id
-      },
-      {
-        headers,
-        
-      }
-    )
-    .then((res) => {
-      if (res.status === 200) {
-        setReqs(res.data.req)
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      .post(
+        `/admin/deleteReq`,
+        {
+          id
+        },
+        {
+          headers
+        }
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          setReqs(res.data.req)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
   const acceptReqById = (id) => {
     axios
-    .post(
-      `/admin/acceptReq`,
-      {
-        id
-      },
-      {
-        headers,
-        
-      }
-    )
-    .then((res) => {
-      if (res.status === 200) {
-        setReqs(res.data.req)
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+      .post(
+        `/admin/acceptReq`,
+        {
+          id
+        },
+        {
+          headers
+        }
+      )
+      .then((res) => {
+        if (res.status === 200) {
+          setReqs(res.data.req)
+        }
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     getReq()
   }, [])
-  
-  const handleClickDeny = (id,e) => {
+
+  const handleClickDeny = (id, e) => {
     denyReqById(id)
   }
 
-  const handleClickAccept = (id,e) => {
+  const handleClickAccept = (id, e) => {
     acceptReqById(id)
   }
   return (
@@ -151,23 +148,32 @@ export const Request = () => {
                     {el.fullName}
                   </div>
                   <div className={`${styles.col} ${styles.col3}`}>
-                    {dayjs(el.createdAt).locale('ru').format("HH:mm, D MMMM YYYY")}
+                    {dayjs(el.createdAt)
+                      .locale("ru")
+                      .format("HH:mm, D MMMM YYYY")}
                   </div>
                   <div className={`${styles.col} ${styles.col4}`}>
                     {el.phone}
                   </div>
                   <div className={`${styles.col} ${styles.col5}`}>
-                    {el.status === '0' ? (
+                    {el.status === "0" ? (
                       <>
-                      <Button type='2' click={handleClickAccept.bind(this,el.id)} text="Одобрить"/>
-                      <Button type='2' click={handleClickDeny.bind(this,el.id)} text="Отклонить"/>
+                        <Button
+                          type="2"
+                          click={handleClickAccept.bind(this, el.id)}
+                          text="Одобрить"
+                        />
+                        <Button
+                          type="2"
+                          click={handleClickDeny.bind(this, el.id)}
+                          text="Отклонить"
+                        />
                       </>
-                    ) : el.status === '1' ? (
+                    ) : el.status === "1" ? (
                       <p>Одобренно</p>
-                      ): (
+                    ) : (
                       <p>Отклонено</p>
-                    )
-                    }
+                    )}
                   </div>
                 </li>
               ))}

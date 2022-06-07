@@ -1,6 +1,14 @@
-import styles from './header.module.scss'
-import logo from '../../common/img/logo.png'
-import { Vk, Youtube, Whatsapp, Telegram, ClockRegular, InstagramBrands, PhoneAlt } from '../SvgImporter'
+import styles from "./header.module.scss"
+import logo from "../../common/img/logo.png"
+import {
+  Vk,
+  Youtube,
+  Whatsapp,
+  Telegram,
+  ClockRegular,
+  InstagramBrands,
+  PhoneAlt
+} from "../SvgImporter"
 export const Header = () => {
   return (
     <div className={styles.header}>
@@ -11,33 +19,33 @@ export const Header = () => {
         <div className={styles.header_top_container}>
           <div className={styles.header_top_container_socLink}>
             <a href="http://vk.com/">
-              <Vk/>
+              <Vk />
             </a>
             <a href="http://youtube.com/">
-              <Youtube/>
+              <Youtube />
             </a>
             <a href="http://whatsapp.com/">
-              <Whatsapp/>
+              <Whatsapp />
             </a>
             <a href="http://telegram.com/">
-              <Telegram/>
+              <Telegram />
             </a>
           </div>
           <div className={styles.header_top_container_separator}></div>
           <div className={styles.header_top_container_workTime}>
-            <ClockRegular/>
+            <ClockRegular />
             <p>Часы работы: с 6:00 до 20:00, пн-сб</p>
           </div>
           <div className={styles.header_top_container_separator}></div>
           <div className={styles.header_top_container_menu}>
             <a href="http://instagram.com/">
-              <InstagramBrands/>
+              <InstagramBrands />
             </a>
             <a href="tel:89123037544">
-              <PhoneAlt/>
+              <PhoneAlt />
             </a>
             <a href="http://telegram.com/">
-              <Telegram/>
+              <Telegram />
             </a>
           </div>
         </div>
@@ -45,24 +53,16 @@ export const Header = () => {
       <div className={styles.header_menuWrapper}>
         <div className={styles.header_menuWrapper_container}>
           <div className={styles.header_menuWrapper_container_link}>
-            <a href="/">
-              Главная
-            </a>
+            <a href="/">Главная</a>
           </div>
           <div className={styles.header_menuWrapper_container_link}>
-            <a href="#ListServices">
-             Услуги
-            </a>
+            <a href="#ListServices">Услуги</a>
           </div>
           <div className={styles.header_menuWrapper_container_link}>
-            <a href="#Feedback">
-              Отзывы
-            </a>
+            <a href="#Feedback">Отзывы</a>
           </div>
           <div className={styles.header_menuWrapper_container_link}>
-            <a href="/About">
-              О нас
-            </a>
+            <a href="/About">О нас</a>
           </div>
         </div>
       </div>

@@ -1,66 +1,66 @@
-    * {
-        font-family: Raleway;
+* {
+  font-family: Raleway;
+}
+
+.faqWrapper {
+  width: 100%;
+  background-color: #151515;
+  padding-bottom: 100px;
+  &_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &_textCenter {
+      text-align: center;
+      flex-direction: column;
+      width: 1200px;
+      p {
+        margin: 30px;
+      }
+      &_header {
+        color: #f15b5b;
+        font-weight: 600;
+        font-size: 28px;
+      }
+      &_title {
+        color: #fff;
+        font-weight: 500;
+        font-size: 22px;
+      }
+      &_fullTitle {
+        color: #fff;
+        font-weight: 500;
+        font-size: 22px;
+      }
     }
-    
-    .faqWrapper {
+  }
+  &_blockQuestions {
+    margin: 0 200px;
+    display: flex;
+    justify-content: center;
+    &_ask {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1810px;
+      p {
+        padding: 15px;
+      }
+      &_block {
+        max-width: 470px;
         width: 100%;
-        background-color: #151515;
-        padding-bottom: 100px;
-        &_content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            &_textCenter {
-                text-align: center;
-                flex-direction: column;
-                width: 1200px;
-                p {
-                    margin: 30px;
-                }
-                &_header {
-                    color: #F15B5B;
-                    font-weight: 600;
-                    font-size: 28px;
-                }
-                &_title {
-                    color: #fff;
-                    font-weight: 500;
-                    font-size: 22px;
-                }
-                &_fullTitle {
-                    color: #fff;
-                    font-weight: 500;
-                    font-size: 22px;
-                }
-            }
+        padding: 10px;
+        &_title {
+          color: #fff;
+          font-weight: 500;
+          font-size: 32px;
         }
-        &_blockQuestions {
-            margin: 0 200px;
-            display: flex;
-            justify-content: center;
-            &_ask {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                max-width: 1810px;
-                p {
-                    padding: 15px;
-                }
-                &_block {
-                    max-width: 470px;
-                    width: 100%;
-                    padding: 10px;
-                    &_title {
-                        color: #fff;
-                        font-weight: 500;
-                        font-size: 32px;
-                    }
-                    &_description {
-                        color: #fff;
-                        font-weight: 300;
-                        font-size: 16px;
-                    }
-                }
-            }
+        &_description {
+          color: #fff;
+          font-weight: 300;
+          font-size: 16px;
         }
+      }
     }
+  }
+}

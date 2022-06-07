@@ -1,4 +1,4 @@
-import styles from './aboutUs.module.scss'
+import styles from "./aboutUs.module.scss"
 export const AboutUs = () => {
   return (
     <div className={styles.wrapper}>

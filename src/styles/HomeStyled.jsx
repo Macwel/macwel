@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Container = styled.div`
-    background-color: black;
+  background-color: black;
 `
 
-export {Container}
+export { Container }

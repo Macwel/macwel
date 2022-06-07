@@ -1,46 +1,45 @@
-import styles from "./index.module.scss";
-import { useEffect, useState, useTransition } from "react";
-import { SideBar } from "../sidebar/Sidebar";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import axios from "axios";
+import styles from "./index.module.scss"
+import { useEffect, useState, useTransition } from "react"
+import { SideBar } from "../sidebar/Sidebar"
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import axios from "axios"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => {
-  const [activeBlock, setActiveBlock] = useState(2);
-  const [reqCounter, setReqCounter] = useState(null);
-  const [reqCounterFinall, setreqCounterFinall] = useState(null);
-  const [reqCounterCall, setreqCounterCall] = useState(null);
+  const [activeBlock, setActiveBlock] = useState(2)
+  const [reqCounter, setReqCounter] = useState(null)
+  const [reqCounterFinall, setreqCounterFinall] = useState(null)
+  const [reqCounterCall, setreqCounterCall] = useState(null)
   const token = window.localStorage.getItem("token")
 
-  if(!token){
-    window.location.href = '/admin/auth'
+  if (!token) {
+    window.location.href = "/admin/auth"
   }
 
   const headers = {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
-  };
-  
-  useEffect(()=> {
+    Authorization: `Bearer ${token}`
+  }
+
+  useEffect(() => {
     axios
       .post(
         `/admin/stats`,
         {},
         {
-          headers,
-          
+          headers
         }
       )
       .then((res) => {
         if (res.status === 200) {
-          setReqCounter(res.data.requestCount);
-          setreqCounterFinall(res.data.requestFinall);
-          setreqCounterCall(res.data.requestCall);
+          setReqCounter(res.data.requestCount)
+          setreqCounterFinall(res.data.requestFinall)
+          setreqCounterCall(res.data.requestCall)
         }
       })
       .catch((err) => {
-        console.log(err);
-      });
+        console.log(err)
+      })
   }, [])
   return (
     <div className={styles.indexWrapper}>
@@ -101,5 +100,5 @@ export default () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

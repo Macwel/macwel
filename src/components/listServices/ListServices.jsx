@@ -1,6 +1,6 @@
-import styles from './listServices.module.scss'
-import Button from '../Button/Button'
-import { LessThan } from '../SvgImporter'
+import styles from "./listServices.module.scss"
+import Button from "../Button/Button"
+import { LessThan } from "../SvgImporter"
 export const ListServices = () => {
   return (
     <div id="ListServices" className={styles.wrapper_services}>
@@ -42,7 +42,7 @@ export const ListServices = () => {
             Ремонт и замена трансмиссии
           </div>
           <div className={styles.wrapper_services_listServices_column_point}>
-          <LessThan
+            <LessThan
               className={
                 styles.wrapper_services_listServices_column_point_lessThan
               }
@@ -134,98 +134,98 @@ export const ListServices = () => {
           <div className={styles.wrapper_services_listServices_column}>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Регулярное ТО
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Шиномонтаж
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Замена сцепления
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Развал схождение
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Профессиональная диагностика двигателя
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
-              <LessThan 
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+              <LessThan
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Промывка радиатора печи без снятия
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Проточка тормозных дисков
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Ремонт ремня ГРМ
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Замена ШРУС
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Проточка передних тормозных дисков
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Ремонт охладителя
             </div>
             <div className={styles.wrapper_services_listServices_column_point}>
               <LessThan
-              className={
-                styles.wrapper_services_listServices_column_point_lessThan
-              }
-            />
+                className={
+                  styles.wrapper_services_listServices_column_point_lessThan
+                }
+              />
               Замена задних пневмобалонов
             </div>
           </div>

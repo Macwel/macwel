@@ -1,4 +1,4 @@
-import styles from './cookies.module.scss'
+import styles from "./cookies.module.scss"
 export const Cook = () => {
   return (
     <div className={styles.wrapper}>

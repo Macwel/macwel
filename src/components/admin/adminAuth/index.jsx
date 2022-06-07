@@ -1,20 +1,20 @@
-import styles from './auth.module.scss'
-import Button from '../../Button/Button'
-import { Formik, Field, Form } from 'formik'
-import axios from 'axios'
-import * as Yup from 'yup';
+import styles from "./auth.module.scss"
+import Button from "../../Button/Button"
+import { Formik, Field, Form } from "formik"
+import axios from "axios"
+import * as Yup from "yup"
 
 const SignupSchema = Yup.object().shape({
   password: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Введите пароль'),
-  email: Yup.string().email('Не корректный Емэйл').required('Введите Емэйл'),
-});
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Введите пароль"),
+  email: Yup.string().email("Не корректный Емэйл").required("Введите Емэйл")
+})
 
 export const Auth = () => {
-  if(window.localStorage.getItem('token')){
-    window.location.href = '/admin'
+  if (window.localStorage.getItem("token")) {
+    window.location.href = "/admin"
   }
   return (
     <div className={styles.wrapper}>
@@ -30,39 +30,37 @@ export const Auth = () => {
           <Formik
             validationSchema={SignupSchema}
             initialValues={{
-              email: '',
-              password: '',
-              error: '',
+              email: "",
+              password: "",
+              error: ""
             }}
             onSubmit={(values, { setErrors, resetForm: any }) => {
               const headers = {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer fefege...',
+                "Content-Type": "application/json",
+                Authorization: "Bearer fefege..."
               }
               axios
                 .post(
                   `/admin/sign-in`,
                   {
                     email: values.email,
-                    password: values.password,
+                    password: values.password
                   },
                   {
-                    headers: headers,
+                    headers: headers
                   }
                 )
                 .then((res) => {
                   if (res.status === 200) {
-                    window.localStorage.setItem('token', res.data.token)
-                    return (
-                      window.location.href = '/admin'
-                    )
+                    window.localStorage.setItem("token", res.data.token)
+                    return (window.location.href = "/admin")
                   }
                 })
                 .catch((err) => {
-                  setErrors({error: err.response.data.message})
-                  console.log('tfs')
+                  setErrors({ error: err.response.data.message })
+                  console.log("tfs")
                 })
-              }}
+            }}
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
             render={({ values, errors }) => (
               <Form>
@@ -97,8 +95,8 @@ export const Auth = () => {
                   )}
                 </div>
                 {errors.error && (
-                    <p className={styles.promoTitle}>{errors.error}</p>
-                  )}
+                  <p className={styles.promoTitle}>{errors.error}</p>
+                )}
                 <Button text="Войти" />
               </Form>
             )}
