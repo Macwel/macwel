@@ -1,0 +1,59 @@
+* {
+    font-family: Raleway;
+}
+
+.slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    &__img {
+        height: 100vh;
+        background-attachment: scroll;
+        transform: initial;
+        background-image: url(https://thumb.tildacdn.com/tild3634-3334-4330-b933-323363656532/-/format/webp/download.jpg);
+        /* height: 700px; */
+        filter: brightness(0.8);
+        width: 100%;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        background-attachment: fixed;
+        transform: translate3d(0,0,0);
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: unset;
+    }
+    &_line {
+        @media screen and (max-width: 520px) {
+            height: auto;
+            transform: none;
+        }
+        @media screen and (max-width: 900px) {
+            height: auto;
+        }
+        position: absolute;
+        top: 20%;
+        height: 200px;
+        width: 100%;
+        transform: translate(0%, 50%);
+        background-color: rgba(255, 255, 255, 0.397);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        div {
+            display: flex;
+            justify-content: center;
+            p {
+                color: #fff;
+                font-weight: 800;
+                font-size: 38px;
+            }
+        }
+    }
+}

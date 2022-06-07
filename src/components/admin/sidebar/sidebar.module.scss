@@ -1,0 +1,112 @@
+.sidebar {
+    transition: all .3s ease;
+    @media (max-width: 767px) {
+        width: 46px;
+    }
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 256px;
+    background-color: #151515;
+    &_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 256px;
+        height: 128px;
+        color: #A4A6B3;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    &_items {
+        cursor: pointer;
+        padding-left: 10px;
+        height: 300px;
+        width: 256px;
+        padding-left: 0;
+        &_overwiew {
+            color: #A4A6B3;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px;
+            svg {
+                padding-right: 20px;
+            }
+        }
+        &_request {
+            color: #A4A6B3;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px;
+            svg {
+                padding-right: 20px;
+            }
+        }
+        &_contacts {
+            color: #A4A6B3;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px;
+            svg {
+                padding-right: 20px;
+            }
+        }
+        &_agents {
+            color: #A4A6B3;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px;
+            svg {
+                margin-left: -5px;
+                padding-right: 20px;
+            }
+        }
+        &_product {
+            color: #A4A6B3;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px;
+            svg {
+                margin-left: -2px;
+                padding-right: 20px;
+            }
+        }
+        &_separator {
+            background-color: #A4A6B3;
+            width: 100%;
+            padding: 0.1px 0;
+            opacity: 40%;
+            @media (max-width: 767px) {
+                width: 46px;
+            }
+        }
+        &_settings {
+            color: #A4A6B3;
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px;
+            svg {
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+.icon {
+    padding-right: 15px;
+    svg {
+        height: 16px !important;
+        width: 16px !important;
+        fill: #9FA2B4;
+    }
+}
+
+.activePage {
+    border-left: 3px solid #fff;
+    background-color: rgba(159, 162, 180, 0.2);
+    color: #fff;
+    text
+    svg {
+        fill: #fff;
+    }
+}
