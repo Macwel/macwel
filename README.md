@@ -1,9 +1,8 @@
-### Hi there 👋
-### 🔭 I’m currently working on a large CORS application )
+### Hi👋
 
 ### Connect with me:
 
-[<img alt="webDev | VK" src="https://img.shields.io/badge/vk-4680C2.svg?&style=for-the-badge&logo=vk&logoColor=white" />][vk]
+[<img alt='Telegram' src='https://img.shields.io/badge/telegram-fff.svg?&style=for-the-badge&logo=telegram&logoColor=white' />](https://t.me/kit1736)
 
 
 ### 💻 Tech Stack:
@@ -12,10 +11,11 @@
 <img alt="jest" src="https://img.shields.io/badge/jest-C21325.svg?&style=for-the-badge&logo=jest&logoColor=fff" />&nbsp;
 <img alt="node.js" src="https://img.shields.io/badge/node.js-90C53F.svg?&style=for-the-badge&logo=node.js&logoColor=fff" />&nbsp;
 <img alt="mongodb" src="https://img.shields.io/badge/mongodb-26A944.svg?&style=for-the-badge&logo=mongodb&logoColor=fff" />&nbsp;
+<img alt="PostgreSQL" src="https://img.shields.io/badge/postgresql-blue.svg?&style=for-the-badge&logo=postgresql&logoColor=fff" />&nbsp;
+<img alt="PrismaJs" src="https://img.shields.io/badge/prisma-black.svg?&style=for-the-badge&logo=prisma&logoColor=fff" />&nbsp;
 <img alt="html5" src="https://img.shields.io/badge/html-E34F26.svg?&style=for-the-badge&logo=html5&logoColor=fff" />&nbsp;
 <img alt="css3" src="https://img.shields.io/badge/css-1572B6.svg?&style=for-the-badge&logo=css3&logoColor=fff" />&nbsp;
-<img alt="sass" src="https://img.shields.io/badge/sass-CF649A.svg?&style=for-the-badge&logo=sass&logoColor=fff" />&nbsp;
-<img alt="javascript" src="https://img.shields.io/badge/javascript-F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=fff" />&nbsp;
+<img alt="scss" src="https://img.shields.io/badge/sass-CF649A.svg?&style=for-the-badge&logo=sass&logoColor=fff" />&nbsp;
 <img alt="markdown" src="https://img.shields.io/badge/markdown-000.svg?&style=for-the-badge&logo=markdown&logoColor=fff" />&nbsp;
 
 ### 🛠 Tools:
