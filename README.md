@@ -1,9 +1,6 @@
 ### Hi there 👋
 ### 🔭 I’m currently working on a large CORS application )
 
-<!--
-**Macwel/macwel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
 ### Connect with me:
 
 [<img alt="webDev | VK" src="https://img.shields.io/badge/vk-4680C2.svg?&style=for-the-badge&logo=vk&logoColor=white" />][vk]
